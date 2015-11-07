@@ -9,3 +9,10 @@ Emilian Czarnasiak 108574 emilian.czarnasiak@student.put.poznan.pl
 Projekt Elektroniczna Recepta toaplikacja do wystawianie e-recept dla lekarza oraz realizacja recept przez
 farmaceute.
 Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceuta bedzie realizował recepty po peselu pacjenta.
+
+##Założona funkcjonalność po pierwszym etapie (6.12.2015)
+
+
+##Opis architektury
+
+##Przewidywane środowisko realizacji projektu
