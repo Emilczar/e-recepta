@@ -1,5 +1,5 @@
-# recepta-1
-Elektroniczna recepta #1
+### RECEPTA
+
 
 ##Członkowie zespołu
 
