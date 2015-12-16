@@ -22,7 +22,7 @@
         <form:form method="post" modelAttribute=""> 
 		 <table>
 		<tr>
-		<td>Nazwa kortu</td>
+		<td>lista</td>
 		
 		</tr>
         
