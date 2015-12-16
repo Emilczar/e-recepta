@@ -33,5 +33,8 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="D:/JAR/javax-inject.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/mysql-connector-java-5.1.37.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/spring-jdbc-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
