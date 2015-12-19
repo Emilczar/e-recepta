@@ -11,44 +11,21 @@
     </head>
     <body>
         <div align="center">
-            <h1>Szukaj Leków</h1>
+            <h1>Lista Leków</h1>
 			             
         </div>
        
-       
-       
-       
-       
-   
-        
-        <form:form method="post" modelAttribute="newLek"> 
-		 <table>
-		<tr>
-		<td>lista</td>
-		
-		</tr>
-        
-        <tr> 
-        	<td>
-        	<form:input path="lek" id="lek" type=""/>
-        	</td>
-        </tr>
-        
-        <tr>
-<td colspan="3"><input type="submit" value="Szukaj"/></td>
-	</tr>
-        
-        </table>
-        
-    </form:form>
+       <form action="/webapp/szukaj">
+    	<input type="submit" value="dodaj leki" />
+			</form>
       
 
  <table>
-<c:forEach var="emp" items="${lekLista}">
+<c:forEach var="emp" items="${leki}">
  	<tr>
 		<td> ${emp}</td>
-		<td><form action="/webapp/szukaj/${emp}">
-    	<input type="submit" value="Dodaj" />
+		<td><form action="/webapp/usun/${emp}">
+    	<input type="submit" value="Usun" />
 			</form>
 		</td>
 	</tr>  

@@ -11,25 +11,18 @@
     </head>
     <body>
         <div align="center">
-            <h1>Contact List</h1>
+            <h1>Potwierdzenie</h1>
 			             
         </div>
-       
+         
+        <p>dodano lek: <b>${lekLista}</b> do e-recepty</p>
+        <form action="/webapp/lista">
+    	<input type="submit" value="OK" />
+			</form>
+     
+      
+
         
-		 <table>
-		<tr>
-		<td>lista</td>
-		
-		</tr>
-        
-        <tr>
-<td colspan="3"><form action="/webapp/lista">
-    	<input type="submit" value="E-recepta" />
-		</form></td>
-	</tr>
-        
-        </table>
-   
         
     </body>
 </html>
