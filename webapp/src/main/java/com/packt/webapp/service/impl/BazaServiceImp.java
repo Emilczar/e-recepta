@@ -17,4 +17,20 @@ public class BazaServiceImp
   {
     return this.lekdao.findall(leknazwa);
   }
+
+public int CountROW() {
+	
+	return lekdao.CountROW();
+}
+
+
+
+public void insertLek(int id, int pesel, int stan, String lek1, String lek2, String lek3, String lek4, String lek5) {
+	lekdao.insertLek(id, pesel, stan, lek1, lek2, lek3, lek4, lek5);
+	
+}
+
+
+  
+  
 }

@@ -11,45 +11,40 @@
     </head>
     <body>
         <div align="center">
-            <h1>Lista Leków</h1>
+            <h1>Contact List</h1>
 			             
         </div>
-    <table>   
-    <tr>
-   <c:set var="age" value="26"/>
-    
-   <c:if test="${licznik <= 0}"> 
- <c:set var="dostep" value="disabled"/>
-  </c:if>
-    
-
-    
- 
-    
-      <td> <form action="/webapp/szukaj">
-    	<input type="submit" value="dodaj leki" />
-			</form>
-			</td>
-			<td>
-			<form action="/webapp/wyslij">
-			
-    	<input type="submit" value="wyslij" ${dostep} />
-    	
-			</form>
+       
+        
+		 <table>
+		<tr>
+		<td>Wysłano</td>
 		
-			
-			</td>
-  </tr>
-  	
+		</tr>
+        
+        <tr>
+<td colspan="3"><form action="/webapp/lista">
+    	<input type="submit" value="E-recepta" />
+		</form></td>
+	</tr>
+        
+       
 <c:forEach var="emp" items="${leki}">
  	<tr>
 		<td> ${emp}</td>
-		<td><form action="/webapp/usun/${emp}">
-    	<input type="submit" value="Usun" />
-			</form>
-		</td>
+		
+    	
+			
+		
 	</tr>  
 </c:forEach>
-    </table>    
+    </table>   
+        
+        
+        
+        
+        </table>
+   
+        
     </body>
 </html>

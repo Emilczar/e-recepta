@@ -17,7 +17,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class SzukajControler
 {
 	
-ArrayList<String> ListaLekow = new ArrayList<String>();
+ArrayList<String> listaLekow = new ArrayList<String>();
+String[] tablek = new  String[5];
+String lek1 ="";
+String lek2 ="";
+String lek3 ="";
+String lek4 ="";
+String lek5 ="";
+int liczba;
+int stan = 0;
 
   @Autowired
   private BazaService bazaService;
@@ -26,7 +34,7 @@ ArrayList<String> ListaLekow = new ArrayList<String>();
   public String list(Model model)
   {
   //  String lek = "%as%";
-    
+	  System.out.println("liczba wierszy "+ bazaService.CountROW());
     //model.addAttribute("leki", this.bazaService.findall(lek));
     
     return "welcome";
@@ -46,7 +54,7 @@ ArrayList<String> ListaLekow = new ArrayList<String>();
   {
 	  String lek_1 = newlek.getLek();
 	  String lek = "%"+lek_1+"%";
-	  System.out.println("test "+ this.bazaService.findall(lek));
+	//  System.out.println("test "+ this.bazaService.findall(lek));
 	  model.addAttribute("lekLista", this.bazaService.findall(lek));
 
 	  return "szukaj";
@@ -56,23 +64,50 @@ ArrayList<String> ListaLekow = new ArrayList<String>();
   public String wynikAdd(@PathVariable("lekLista") String lek, Model model)
   {
 	  model.addAttribute("lekLista", lek);
-	  ListaLekow.add(lek);
+	  listaLekow.add(lek);
+	  liczba = listaLekow.size();
 	  return "addlek" ;
   }
   
   @RequestMapping({"/lista"})
   public String list1(Model model)
   { 
-    model.addAttribute("leki", ListaLekow );
-    System.out.println("Lista: "+ ListaLekow);
+	 liczba = listaLekow.size();
+    model.addAttribute("leki", listaLekow );
+    model.addAttribute("licznik", liczba );
+    System.out.println("LICZNIK: "+ liczba);
     return "lista";
   }
   @RequestMapping("/usun/{lekLista}")
   public String usunZlistyLekow(@PathVariable("lekLista") String lek, Model model)
   {
-	  ListaLekow.remove(lek);
+	  listaLekow.remove(lek);
 	  return "redirect:/lista";
   }
-  
+  @RequestMapping({"/wyslij"})
+  public String wyslijRecepte(Model model)
+  { 
+	  int i = 0;
+	 
+	 int id = bazaService.CountROW()+1;
+	 int pesel = 21;
+	 
+	 for (String string : listaLekow) {
+		tablek[i++] = string;
+	}
+	
+	
+	System.out.println("BAZA");
+	bazaService.insertLek(id, pesel, stan, tablek[0], tablek[1], tablek[2], tablek[3], tablek[4]);
+	
+    model.addAttribute("leki",listaLekow );
+    System.out.println("Lista: "+ listaLekow);
+    listaLekow.clear();
+    for (int j = 0; j < 5; j++) {
+		tablek[j] = "";
+	}
+    return "wyslij";
+    
+  }
 }
 

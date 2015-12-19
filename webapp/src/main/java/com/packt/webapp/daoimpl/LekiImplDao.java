@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import javax.sql.DataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowCountCallbackHandler;
 
 public class LekiImplDao
   implements LekDao
@@ -55,4 +56,25 @@ public class LekiImplDao
     }
     return listLek;
   }
+
+public int CountROW() {
+	String sql = "SELECT * FROM recepta";
+    JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
+
+    RowCountCallbackHandler countCallback = new RowCountCallbackHandler();  // not reusable
+    jdbcTemplate.query(sql, countCallback);
+    int rowCount = countCallback.getRowCount();
+	return rowCount;
+}
+
+
+
+public void insertLek(int id, int pesel, int stan, String lek1, String lek2, String lek3, String lek4, String lek5) {
+
+	JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
+	jdbcTemplate.update("insert into recepta (id, pesel, stan, lek1,lek2,lek3,lek4,lek5) values (?,?,?,?,?,?,?,?)" ,id, pesel, stan, lek1, lek2, lek3, lek4,lek5);
+}
+
+
+  
 }
