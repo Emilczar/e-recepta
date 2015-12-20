@@ -75,6 +75,25 @@ public void insertLek(int id, int pesel, int stan, String lek1, String lek2, Str
 	jdbcTemplate.update("insert into recepta (id, pesel, stan, lek1,lek2,lek3,lek4,lek5) values (?,?,?,?,?,?,?,?)" ,id, pesel, stan, lek1, lek2, lek3, lek4,lek5);
 }
 
+//apteka
+
+
+public List<String> findRecepta(Integer pesel) {
+	JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
+	 String sql = "SELECT id  FROM recepta where pesel = ? AND stan = 0";
+	
+	 
+	 List<String> receptaLista = new ArrayList();
+	    List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, new Object[] { pesel });
+	    for (Map<String, Object> row : rows)
+	    {
+	      String id1 = (String)row.get("id");
+	      receptaLista.add(id1);
+	    }
+	    return receptaLista;
+	
+}
+
 
   
 }
