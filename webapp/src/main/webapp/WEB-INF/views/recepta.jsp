@@ -7,45 +7,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact Manager Home</title>
+        <title>RECEPTA</title>
     </head>
     <body>
         <div align="center">
-            <h1>Szukaj Recepty</h1>
+            <h1>RECETPA</h1>
 			             
         </div>  
-        <form:form method="post" modelAttribute="newPacjent"> 
-		 <table>
-		<tr>
-		<td>Pesel</td>
-		
-		</tr>
-        
-        <tr> 
-        	<td>
-        	<form:input path="Pesel" id="Pesel" type=""/>
-        	</td>
-        </tr>
-        
-        <tr>
-<td colspan="3"><input type="submit" value="Szukaj"/></td>
-	</tr>
-        
-        </table>
-        
-    </form:form>
-      
-<td> ${uwaga}</td>
+     
+
  <table>
-<c:forEach var="emp" items="${recepta}">
+<c:forEach var="emp" items="${listaId}">
  	<tr>
 		<td> ${emp}</td>
-		<td><form action="/webapp/apteka/${emp}">
-    	<input type="submit" value="wykonaj" />
-			</form>
-		</td>
+		
 	</tr>  
 </c:forEach>
+<td><form action="/webapp/apteka/wykonaj/${Id}">
+    	<input type="submit" value="wykonaj" />
+			</form>
+			
+			<td><form action="/webapp/apteka/">
+    	<input type="submit" value="Anuluj" />
+			</form>
+		</td>
+		</td>
     </table>    
     </body>
 </html>

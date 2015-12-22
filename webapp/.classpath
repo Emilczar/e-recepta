@@ -36,5 +36,8 @@
 	<classpathentry kind="lib" path="D:/JAR/javax-inject.jar"/>
 	<classpathentry kind="lib" path="D:/JAR/mysql-connector-java-5.1.37.jar"/>
 	<classpathentry kind="lib" path="D:/JAR/spring-jdbc-4.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/spring-security-config-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/spring-security-web-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/spring-asm-3.1.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -78,7 +78,7 @@ public void insertLek(int id, int pesel, int stan, String lek1, String lek2, Str
 //apteka
 
 
-public List<String> findRecepta(Integer pesel) {
+public List<String> findReceptaAll(Integer pesel) {
 	JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
 	 String sql = "SELECT id  FROM recepta where pesel = ? AND stan = 0";
 	
@@ -92,6 +92,34 @@ public List<String> findRecepta(Integer pesel) {
 	    }
 	    return receptaLista;
 	
+}
+
+public List<String> findReceptaID(Integer id) {
+	JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
+	 String sql = "SELECT lek1, lek2, lek3, lek4, lek5  FROM recepta where id = ? ";
+	 List<String> listaLekow = new ArrayList();
+	 List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql, new Object[] { id });
+	   for (Map<String, Object> row : rows)
+	    {
+	      String lek1 = (String)row.get("lek1");
+	      listaLekow.add(lek1);
+	      String lek2 = (String)row.get("lek2");
+	      listaLekow.add(lek2);
+	      String lek3 = (String)row.get("lek3");
+	      listaLekow.add(lek3);
+	      String lek4 = (String)row.get("lek4");
+	      listaLekow.add(lek4);
+	      String lek5 = (String)row.get("lek5");
+	      listaLekow.add(lek5);
+	    }
+	 
+	return listaLekow;
+}
+
+public void updateReceptaID(Integer id) {
+	JdbcTemplate jdbcTemplate = new JdbcTemplate(this.dataSource);
+	 String sql = "UPDATE recepta SET stan = 1 WHERE id = ?";
+	 jdbcTemplate.update(sql, id);
 }
 
 

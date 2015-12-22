@@ -33,9 +33,19 @@ public void insertLek(int id, int pesel, int stan, String lek1, String lek2, Str
 
 //apteka
 
-public List<String> findRecepta(Integer pesel) {
+public List<String> findReceptaAll(Integer pesel) {
 	
-	return lekdao.findRecepta(pesel);
+	return lekdao.findReceptaAll(pesel);
+}
+
+public List<String> findReceptaID(Integer id) {
+	
+	return lekdao.findReceptaID(id);
+}
+
+public void updateReceptaID(Integer id) {
+	lekdao.updateReceptaID(id);
+	
 }
 
 

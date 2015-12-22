@@ -17,5 +17,7 @@ public abstract interface LekDao
   
   
   //apteka
-  public List<String> findRecepta(Integer pesel);
+  public List<String> findReceptaAll(Integer pesel);
+  public List<String> findReceptaID(Integer id);
+  public void updateReceptaID(Integer id);
 }
