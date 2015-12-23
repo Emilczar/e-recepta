@@ -7,15 +7,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>RECEPTA</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>Produkty</title>
     </head>
     <body>
+     <a href="<c:url value="/j_spring_security_logout" />" class="btn btn-danger btn-mini pull-right">
+	Wyloguj się</a>
         <div align="center">
             <h1>RECETPA</h1>
 			             
         </div>  
      
-
+  <center>
  <table>
 <c:forEach var="emp" items="${listaId}">
  	<tr>
@@ -24,14 +27,15 @@
 	</tr>  
 </c:forEach>
 <td><form action="/webapp/apteka/wykonaj/${Id}">
-    	<input type="submit" value="wykonaj" />
+    	<input type="submit" class="btn btn-primary " value="wykonaj" />
 			</form>
 			
 			<td><form action="/webapp/apteka/">
-    	<input type="submit" value="Anuluj" />
+    	<input type="submit" class="btn btn-danger " value="Anuluj" />
 			</form>
 		</td>
 		</td>
     </table>    
+      </center>
     </body>
 </html>

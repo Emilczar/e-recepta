@@ -7,7 +7,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact Manager Home</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>Produkty</title>
     </head>
     <body>
     <a href="<c:url value="/j_spring_security_logout" />" class="btn btn-danger btn-mini pull-right">
@@ -16,7 +17,8 @@
             <h1>Szukaj Recepty</h1>
 			             
         </div>  
-        <form:form method="post" modelAttribute="newPacjent"> 
+        <form:form method="post" modelAttribute="newPacjent">
+  <center>
 		 <table>
 		<tr>
 		<td>Pesel</td>
@@ -27,10 +29,10 @@
         	<td>
         	<form:input path="Pesel" id="Pesel" type=""/>
         	</td>
-        </tr>
+     
         
-        <tr>
-<td colspan="3"><input type="submit" value="Szukaj"/></td>
+   
+<td colspan="3"><input type="submit" class="btn btn-primary " value="Szukaj"/></td>
 	</tr>
         
         </table>
@@ -41,13 +43,14 @@
  <table>
 <c:forEach var="emp" items="${recepta}">
  	<tr>
-		<td> ${emp}</td>
+		<td><p>Numer recepty: <b> ${emp}</b></p></td>
 		<td><form action="/webapp/apteka/${emp}">
-    	<input type="submit" value="wykonaj" />
+    	<input type="submit" class="btn btn-primary "  value="wykonaj" />
 			</form>
 		</td>
 	</tr>  
 </c:forEach>
-    </table>    
+    </table>   
+      </center> 
     </body>
 </html>

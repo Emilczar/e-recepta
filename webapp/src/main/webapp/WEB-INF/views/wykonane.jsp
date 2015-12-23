@@ -6,20 +6,24 @@
  
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Potwierdzenie wykonania</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>Produkty</title>
     </head>
     <body>
+     <a href="<c:url value="/j_spring_security_logout" />" class="btn btn-danger btn-mini pull-right">
+	Wyloguj się</a>
         <div align="center">
             <h1>Potwierdzenie</h1>
 			             
         </div>
          
-        <p>wykonano recepte <b>${wykonaj}</b></p>
+         <center> <p>wykonano recepte <b>${wykonaj}</b></p>  </center>
+      <center>
         <form action="/webapp/apteka/">
-    	<input type="submit" value="OK" />
+    	<input type="submit" class="btn btn-primary "  value="OK" />
 			</form>
-     
+     </center>
       
 
         

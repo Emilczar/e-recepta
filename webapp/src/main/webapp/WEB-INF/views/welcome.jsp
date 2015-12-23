@@ -7,29 +7,32 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact Manager Home</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>E-Recepta</title>
     </head>
     <body>
         <div align="center">
-            <h1>Contact List</h1>
+            <h1>E-RECEPTA</h1>
 			             
         </div>
        
-        
+      <center>  
 		 <table>
-		<tr>
-		<td>lista</td>
 		
-		</tr>
         
         <tr>
-<td colspan="3"><form action="/webapp/lista">
-    	<input type="submit" value="E-recepta" />
-		</form></td>
+
+		<td colspan="3">
+
+<a href="/webapp/lista" class="btn btn-primary" role="button">Lekarz</a>	
+<a href="/webapp/apteka" class="btn btn-primary" role="button">Farmaceuta</a>		
+	
+		
+		</td>
 	</tr>
         
         </table>
-   
+   </center>
         
     </body>
 </html>

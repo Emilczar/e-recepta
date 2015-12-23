@@ -6,14 +6,18 @@
  
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact Manager Home</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>Produkty</title>
     </head>
     <body>
+     <a href="<c:url value="/j_spring_security_logout" />" class="btn btn-danger btn-mini pull-right">
+	Wyloguj się</a>
         <div align="center">
             <h1>Lista Leków</h1>
 			             
         </div>
+        <center>
     <table>   
     <tr>
    <c:set var="age" value="26"/>
@@ -23,32 +27,35 @@
   </c:if>
     
 
-      <td> <form action="/webapp/szukaj">
-    	<input type="submit" value="dodaj leki" />
-			</form>
+      <td><a href="/webapp/szukaj" class="btn btn-primary " role="button">Dodaj</a>	
+      
+      
+     
 			</td>
 			
 			
 			<td>
-			<form action="/webapp/pesel">
 			
-    	<input type="submit" value="wyslij" ${dostep} />
-    	
-			</form>
+			<a href="/webapp/pesel" class="btn btn-primary ${dostep}" role="button">Wyslij</a>	
+		
 		
 			
 			</td>
   </tr>
-  	
+  	</table>  
+  	<table>  
 <c:forEach var="emp" items="${leki}">
  	<tr>
 		<td> ${emp}</td>
-		<td><form action="/webapp/usun/${emp}">
-    	<input type="submit" value="Usun" />
-			</form>
+		<td>
+		<a href="/webapp/usun/${emp}" class="btn btn-danger " role="button">Usun</a>	
+		
+		
+		
 		</td>
 	</tr>  
 </c:forEach>
     </table>    
+    </center>
     </body>
 </html>

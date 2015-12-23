@@ -7,15 +7,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact Manager Home</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>Produkty</title>
     </head>
     <body>
+     <a href="<c:url value="/j_spring_security_logout" />" class="btn btn-danger btn-mini pull-right">
+	Wyloguj się</a>
         <div align="center">
-            <h1>podaj PESEL</h1>
+            <h1>Wysyłanie RECEPTY</h1>
 			             
         </div>
  
         <form:form method="post" modelAttribute="newPacjent"> 
+          <center>
 		 <table>
 		<tr>
 		<td>Pesel</td>
@@ -27,13 +31,13 @@
         	<form:input path="pesel" id="pesel" type="text"/>
         	</td>
         	</form:form>
-        </tr>
+       
         
-        <tr>
+       
 <td colspan="3">
 <form action="/webapp/wyslij">
 			
-    	<input type="submit" value="wyslij"  />
+    	<input type="submit" class="btn btn-primary " value="wyslij"  />
     	
 			</form></td>
 	</tr>
@@ -42,8 +46,6 @@
         
     
       
-
- <table>
-    </table>    
+  </center>  
     </body>
 </html>

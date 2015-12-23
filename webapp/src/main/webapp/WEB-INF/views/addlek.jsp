@@ -7,20 +7,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact Manager Home</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<title>Produkty</title>
     </head>
     <body>
+     <a href="<c:url value="/j_spring_security_logout" />" class="btn btn-danger btn-mini pull-right">
+	Wyloguj się</a>
         <div align="center">
             <h1>Potwierdzenie</h1>
 			             
         </div>
-         
+           <center>
         <p>dodano lek: <b>${lekLista}</b> do e-recepty</p>
         <form action="/webapp/lista">
-    	<input type="submit" value="OK" />
+    	<input type="submit" class="btn btn-primary " value="OK" />
 			</form>
      
-      
+        </center>
 
         
         
