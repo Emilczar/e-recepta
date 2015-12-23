@@ -25,7 +25,7 @@ public int CountROW() {
 
 
 
-public void insertLek(int id, int pesel, int stan, String lek1, String lek2, String lek3, String lek4, String lek5) {
+public synchronized void insertLek(int id, int pesel, int stan, String lek1, String lek2, String lek3, String lek4, String lek5) {
 	lekdao.insertLek(id, pesel, stan, lek1, lek2, lek3, lek4, lek5);
 	
 }
@@ -43,7 +43,7 @@ public List<String> findReceptaID(Integer id) {
 	return lekdao.findReceptaID(id);
 }
 
-public void updateReceptaID(Integer id) {
+public synchronized void updateReceptaID(Integer id) {
 	lekdao.updateReceptaID(id);
 	
 }

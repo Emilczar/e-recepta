@@ -10,12 +10,11 @@
         <title>Contact Manager Home</title>
     </head>
     <body>
-    <a href="<c:url value="/j_spring_security_logout" />" class="btn btn-danger btn-mini pull-right">
-	Wyloguj się</a>
         <div align="center">
-            <h1>Szukaj Recepty</h1>
+            <h1>podaj PESEL</h1>
 			             
-        </div>  
+        </div>
+ 
         <form:form method="post" modelAttribute="newPacjent"> 
 		 <table>
 		<tr>
@@ -25,29 +24,26 @@
         
         <tr> 
         	<td>
-        	<form:input path="Pesel" id="Pesel" type=""/>
+        	<form:input path="pesel" id="pesel" type="text"/>
         	</td>
+        	</form:form>
         </tr>
         
         <tr>
-<td colspan="3"><input type="submit" value="Szukaj"/></td>
+<td colspan="3">
+<form action="/webapp/wyslij">
+			
+    	<input type="submit" value="wyslij"  />
+    	
+			</form></td>
 	</tr>
         
         </table>
         
-    </form:form>
+    
       
-<td> ${uwaga}</td>
+
  <table>
-<c:forEach var="emp" items="${recepta}">
- 	<tr>
-		<td> ${emp}</td>
-		<td><form action="/webapp/apteka/${emp}">
-    	<input type="submit" value="wykonaj" />
-			</form>
-		</td>
-	</tr>  
-</c:forEach>
     </table>    
     </body>
 </html>

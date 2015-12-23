@@ -1,6 +1,7 @@
 package com.packt.webapp.controller;
 
 import com.packt.webapp.domain.Lek;
+import com.packt.webapp.domain.Pacjent;
 import com.packt.webapp.service.BazaService;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ String lek4 ="";
 String lek5 ="";
 int liczba;
 int stan = 0;
-
+int pesel;
   @Autowired
   private BazaService bazaService;
   
@@ -84,14 +85,32 @@ int stan = 0;
 	  listaLekow.remove(lek);
 	  return "redirect:/lista";
   }
+  
+  @RequestMapping(value ="/pesel", method = RequestMethod.GET)
+  public String peselget(Model model)
+  {
+   Pacjent newPacjent = new Pacjent();
+   model.addAttribute("newPacjent", newPacjent);
+   return "pesel";
+  }
+  
+  @RequestMapping(value ="/pesel", method = RequestMethod.POST)
+  public String peselpost(@ModelAttribute("newPacjent") Pacjent newPacjent, Model model)
+  {
+	 pesel=newPacjent.getPesel();
+		System.out.println("pesel: "+ pesel);
+	  return "pesel";
+  
+}
+  
   @RequestMapping({"/wyslij"})
   public String wyslijRecepte(Model model)
   { 
 	  int i = 0;
 	 
 	 int id = bazaService.CountROW()+1;
-	 int pesel = 21;
-	 
+	
+		System.out.println("pesel2: "+ pesel);
 	 for (String string : listaLekow) {
 		tablek[i++] = string;
 	}

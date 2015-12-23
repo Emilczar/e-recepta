@@ -23,15 +23,14 @@
   </c:if>
     
 
-    
- 
-    
       <td> <form action="/webapp/szukaj">
     	<input type="submit" value="dodaj leki" />
 			</form>
 			</td>
+			
+			
 			<td>
-			<form action="/webapp/wyslij">
+			<form action="/webapp/pesel">
 			
     	<input type="submit" value="wyslij" ${dostep} />
     	

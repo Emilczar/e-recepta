@@ -38,6 +38,9 @@
 	<classpathentry kind="lib" path="D:/JAR/spring-jdbc-4.2.2.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/JAR/spring-security-config-4.0.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="D:/JAR/spring-security-web-4.0.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="D:/JAR/spring-asm-3.1.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/JAR/spring-asm-3.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/spring-security-acl-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/spring-security-ldap-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/JAR/spring-security-taglibs-4.0.3.RELEASE.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
