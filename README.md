@@ -37,10 +37,10 @@ Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceut
 
 ##Przewidywane środowisko realizacji projektu
 
-###język programowania
+###Język programowania
 - java
 
-###biblioteki
+###Biblioteki
 
 - Spring Framework
 
@@ -51,3 +51,10 @@ Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceut
 ###Baza danych:
 
 - MySQL
+
+###Uzasadnienie wyboru technologii
+Technologie użyte w projecie są one powszechnie używane. Uzałem również projekt jest dobrym momentem poznania frameworka Springa.
+
+
+##Przewidywane trudności i problemy
+- poznanie Springa.
