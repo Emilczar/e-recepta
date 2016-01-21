@@ -12,8 +12,8 @@
 <section>
 <div class="jumbotron">
 <div class="container">
-<h1>Produkty</h1>
-<p>Dodaj produkty</p>
+<h1>E-RECEPTA</h1>
+<p>system recept</p>
 </div>
 </div>
 </section>
@@ -27,7 +27,6 @@
 <div class="panel-body">
 <c:if test="${not empty error}">
 <div class="alert alert-danger">
-<spring:message code="AbstractUserDetailsAuthenticationProvider.badCredentials"/><br />
 </div>
 </c:if>
 <form action="<c:url value="/j_spring_security_check"></c:url>" method="post">
