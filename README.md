@@ -39,6 +39,7 @@ Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceut
 
 ###Język programowania
 - java
+- javascript
 
 ###Biblioteki
 
