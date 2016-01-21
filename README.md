@@ -13,15 +13,24 @@ Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceut
 
 ##Założona funkcjonalność po pierwszym etapie (6.12.2015)
 ##Zakładana funkcjonalność wersji końcowej
-Lekarz: \n
--mozliwosć logowanie do systemu
+Lekarz:
+
+-mozliwosć logowanie do systemu 
+
 -dodawanie leków do recepty
+
 -wyszukiwanie leków z bazy
+
 -wysanie recepty do bazy
+
 Farmaceuta:
+
 -mozliwosć logowanie do systemu
+
 -pobieranie recepty 
+
 -wyswietlanie recept
+
 -wykonywanie wybranych recept
 
 ##Opis architektury
