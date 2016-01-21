@@ -59,3 +59,4 @@ Technologie użyte w projecie są one powszechnie używane. Uzałem również pr
 
 ##Przewidywane trudności i problemy
 - poznanie Springa.
+- konfiguracja xml.
