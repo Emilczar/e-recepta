@@ -13,26 +13,38 @@ Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceut
 
 ##Założona funkcjonalność po pierwszym etapie (6.12.2015)
 ##Zakładana funkcjonalność wersji końcowej
-Lekarz:
+####Lekarz:
 
--mozliwosć logowanie do systemu 
+- mozliwosć logowanie do systemu 
 
--dodawanie leków do recepty
+- dodawanie leków do recepty
 
--wyszukiwanie leków z bazy
+- wyszukiwanie leków z bazy
 
--wysanie recepty do bazy
+- wysanie recepty do bazy
 
-Farmaceuta:
+###Farmaceuta:
 
--mozliwosć logowanie do systemu
+- mozliwosć logowanie do systemu
 
--pobieranie recepty 
+- pobieranie recepty 
 
--wyswietlanie recept
+- wyswietlanie recept
 
--wykonywanie wybranych recept
+- wykonywanie wybranych recept
 
 ##Opis architektury
 
 ##Przewidywane środowisko realizacji projektu
+
+###język programowania
+- java
+- 
+### biblioteki
+
+- Spring Framework
+
+####Serwer:
+- Tomcat
+####Baza danych:
+- MySQL
