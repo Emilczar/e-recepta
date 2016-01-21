@@ -39,12 +39,15 @@ Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceut
 
 ###język programowania
 - java
-- 
-### biblioteki
+
+###biblioteki
 
 - Spring Framework
 
-####Serwer:
+###Serwer:
+
 - Tomcat
-####Baza danych:
+
+###Baza danych:
+
 - MySQL
