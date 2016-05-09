@@ -57,6 +57,3 @@ Lekarz bedzie mógł wyszukać lekarstwa po nazwie i dodanie do listy. Farmaceut
 Technologie użyte w projecie są one powszechnie używane. Uzałem również projekt jest dobrym momentem poznania frameworka Springa.
 
 
-##Przewidywane trudności i problemy
-- poznanie Springa.
-- konfiguracja xml.
