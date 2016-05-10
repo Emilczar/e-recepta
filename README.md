@@ -3,7 +3,7 @@
 
 ##Członkowie zespołu
 
-Emilian Czarnasiak 108574 emilian.czarnasiak@student.put.poznan.pl
+
 
 
 ##Opis projektu:
